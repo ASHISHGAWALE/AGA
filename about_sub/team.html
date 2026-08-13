@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGA Architectural Firm</title>
+  <link rel="stylesheet" href="t&f.css">
+</head>
+<body>
+  <header>
+    <div class="logo">AGA</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div>
+  </header>
+
+  <section class="about-nav">
+    <ul>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../about_sub/team.html" class="active">Team</a></li>
+      <li><a href="../about_sub/collab.html">Collaborator</a></li>
+      <li><a href="../about_sub/legal.html">Legal</a></li>
+      <li><a href="../about_sub/policy.html">Policies</a></li>
+    </ul>
+  </section>
+
+  <!-- Fullscreen Menu -->
+  <div class="menu-overlay" id="menu-overlay">
+    <ul class="main-menu">
+      <li><a href="../home/index.html">Home</a></li>
+      <li><a href="../project/project.html">Projects</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../jobs/job.html">Jobs</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+      <li><a href="../T&F/t&f.html">Tff</a></li>
+      <li><a href="/Next/Next.html">Beyond</a></li>
+    </ul>
+
+    <div class="bottom-menu">
+      <span>ARCHITECTURE</span>
+      <span>INTERIOR</span>
+      <span>CULTURE</span>
+      <span>PUBLIC</span>
+      <span>SUSTAINABILITY</span>
+      <span>RESEARCH</span>
+    </div>
+  </div>
+
+  <section class="team-section">
+    <h1 class="contact-title">meet our team</h1>
+    <h2>FOUNDING PARTNERS</h2>
+    
+    <div class="founding-partners-grid">
+  <div class="founding-member">
+    <div class="image-box">
+      <img src="../SRC/TEAM/AAKASH.jpeg" alt="Aakash Ghagas">
+    </div>
+    <div class="founding-partner-bio">
+      <h3>AAKASH GHAGAS</h3>
+      <span class="role-title">FOUNDING PARTNER</span>
+      <p>
+        Aakash Ghagas leads design direction and spatial strategy at AGA Architectural Firm. Driven by context, clarity, and structural honesty, his practice explores how architecture shapes human experiences across civic, commercial, and residential landscapes.
+      </p>
+    </div>
+  </div>
+
+  <div class="founding-member">
+    <div class="image-box">
+      <img src="../SRC/TEAM/CHINMAY.jpeg" alt="Chinmay Pashte">
+    </div>
+    <div class="founding-partner-bio">
+      <h3>CHINMAY PASHTE</h3>
+      <span class="role-title">FOUNDING PARTNER</span>
+      <p>
+        Chinmay Pashte directs project realization, urban research, and technical innovation at AGA. His approach integrates sustainable materials with refined construction methodologies to create enduring, culturally resonant spaces.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    <h2>DESIGN COLLECTIVE</h2>
+    <div class="team-grid">
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>VIPUL</h3>
+        </div>
+      </div>
+
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>SOHAM</h3>
+        </div>
+      </div>
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>PRATIK</h3>
+        </div>
+      </div>
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>HIMANSHU</h3>
+        </div>
+      </div>
+    </div>
+
+    <h2>BUSINESS DEVELOPMENT & PR</h2>
+    <div class="team-grid">
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>ASHISH</h3>
+        </div>
+      </div>
+    </div>
+
+    <h2>PEOPLE & ORGANIZATION</h2>
+    <div class="team-grid">
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>SANDEEP</h3>
+        </div>
+      </div>
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>Chaitrali</h3>
+        </div>
+      </div>
+    </div>
+
+    <h2>LEGAL</h2>
+    <div class="team-grid">
+      <div class="team-member name-only">
+        <div class="name-box">
+          <h3>LAXMAN</h3>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
+    text-transform: uppercase;
+  }
+
+  header {
+    position: fixed;   /* stays visible while scrolling */
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: bold;
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+
+  .logo {
+    font-weight: 900;
+    font-size: 2.5em;
+    transition: color 0.3s ease;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .line {
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Different line lengths */
+  .line1 {
+    width: 60%;
+    align-self: flex-start;
+  }
+  .line2 {
+    width: 100%;
+  }
+  .line3 {
+    width: 70%;
+    align-self: flex-end;
+  }
+
+  /* When menu is active, animate into an X */
+  .menu-toggle.active .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+    width: 100%;
+  }
+  .menu-toggle.active .line2 {
+    opacity: 0;
+  }
+  .menu-toggle.active .line3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+    width: 100%;
+  }
+
+  /* About Page Section Navigation */
+  .about-nav {
+    margin-top: 20px;
+    margin: 60px auto 40px auto;
+    text-align: center;
+  }
+
+  .about-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about-nav a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+
+  .about-nav a:hover {
+    color: #e67e22;
+  }
+
+  .about-nav a.active {
+    text-decoration: line-through;
+  }
+
+  /* Fullscreen Menu */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 999;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .close-btn, .search-icon {
+    font-size: 2.5em;
+    cursor: pointer;
+    color: #000;
+  }
+
+  .main-menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .main-menu li {
+    margin: 15px 0;
+  }
+
+  .main-menu a {
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+
+  .main-menu a:hover {
+    color: #e67e22;
+  }
+
+  .bottom-menu {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #000;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .team-section {
+    padding: 0;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+    text-align: center;
+  }
+
+  .team-section h2 {
+    font-size: 1.2em;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 30px; /* reduced gap below title */
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .team-member {
+    position: relative;
+    width: 220px;   /* square width */
+    height: 220px;  /* square height */
+  }
+/* Founding Partner Images */
+.image-box {
+  position: relative;
+  width: 100%;
+  max-width: 180px;   /* smaller width */
+  height: 180px;      /* smaller height */
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Overlay for hover effect */
+
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .overlay h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+  }
+
+  .overlay p {
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  
+
+  .contact-title {
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: transparent;
+    -webkit-text-stroke: 2px #000;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .name-only {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0; /* grey square */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  /* NEW: FOUNDING PARTNERS SPLIT (50% WIDTH EACH ON LAPTOP/DESKTOP WITH GAP) */
+  .founding-partners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two members side by side */
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.founding-member {
+  display: flex;
+  flex-direction: column; /* stack image above text */
+  align-items: flex-start; /* keep text aligned left */
+}
+
+
+
+
+
+
+
+.founding-partner-bio h3 {
+  font-size: 1.4em;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+  letter-spacing: 1.5px;
+  color: #000;
+}
+
+.role-title {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #e67e22;
+  margin-bottom: 12px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.founding-partner-bio p {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+
+
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .team-grid {
+      gap: 30px;
+    }
+    .founding-partners-grid {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .founding-member {
+      flex: 1 1 100%;
+    }
+    .founding-member .image-box {
+      height: 380px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .team-member {
+      width: 100%;
+    }
+    .about-nav ul {
+      gap: 15px;
+      font-size: 1em;
+      flex-wrap: wrap;
+    }
+    .contact-title {
+      font-size: 2.5em;
+    }
+  }
+</style>
+                     </html>

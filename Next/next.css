@@ -1,0 +1,183 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+header {
+  position: fixed;   /* stays visible while scrolling */
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 2.5em;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.line {
+  display: block;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Different line lengths */
+.line1 {
+  width: 60%;
+  align-self: flex-start;
+}
+.line2 {
+  width: 100%;
+}
+.line3 {
+  width: 70%;
+  align-self: flex-end;
+}
+
+/* When menu is active, animate into an X */
+.menu-toggle.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+  width: 100%;
+}
+.menu-toggle.active .line2 {
+  opacity: 0;
+}
+.menu-toggle.active .line3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 100%;
+}
+
+
+
+/* Fullscreen Menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.close-btn, .search-icon {
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #000;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.main-menu li {
+  margin: 15px 0;
+}
+
+.main-menu a {
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+  color: #e67e22;
+}
+
+.bottom-menu {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #000;
+}
+
+.construction {
+  background: linear-gradient(135deg, #a9a9a8, #ffffff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+.countdown {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}

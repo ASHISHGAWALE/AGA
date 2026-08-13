@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murbad School | AGA Architectural Firm</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">AGA</div>
+  <div class="menu-toggle" id="menu-toggle">
+    <span class="line line1"></span>
+    <span class="line line2"></span>
+    <span class="line line3"></span>
+  </div>
+</header>
+
+<!-- Fullscreen Menu -->
+<div class="menu-overlay" id="menu-overlay">
+  <ul class="main-menu">
+    <li><a href="../home/index.html">Home</a></li>
+    <li><a href="../project/project.html">Projects</a></li>
+    <li><a href="../about/about.html">About</a></li>
+    <li><a href="../jobs/job.html">Jobs</a></li>
+    <li><a href="../contact/contact.html">Contact</a></li>
+    <li><a href="../T&F/t&f.html">Tff</a></li>
+    <li><a href="../Next/Next.html">Beyond</a></li>
+  </ul>
+
+  <div class="bottom-menu">
+    <span>ARCHITECTURE</span>
+    <span>INTERIOR</span>
+    <span>CULTURE</span>
+    <span>PUBLIC</span>
+    <span>SUSTAINABILITY</span>
+    <span>RESEARCH</span>
+  </div>
+</div>
+
+
+
+
+  <!-- Projects Grid -->
+  <section class="projects-grid">
+  <div class="project-card" >
+    <img src="../project/src/13NEPL INDUSTRIAL/01.png" alt="Nieuw Bergen">
+  </div>
+</section>
+<!-- Back Button -->
+<div class="back-container">
+  <a href="../project/project.html" class="back-btn">←</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+<style>
+  body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 2.5em;
+  color: #000;   /* force black */
+  transition: none; /* remove any animation or color transition */
+}
+
+.menu-toggle {
+  width: 40px; height: 30px;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.line { height: 3px; background-color: black; border-radius: 2px; transition: all 0.3s ease; }
+.line1 { width: 60%; align-self: flex-start; }
+.line2 { width: 100%; }
+.line3 { width: 70%; align-self: flex-end; }
+.menu-toggle.active .line1 { transform: rotate(45deg) translate(5px, 5px); width: 100%; }
+.menu-toggle.active .line2 { opacity: 0; }
+.menu-toggle.active .line3 { transform: rotate(-45deg) translate(6px, -6px); width: 100%; }
+
+/* Fullscreen Menu */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 999;
+}
+.menu-overlay.active { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.main-menu { list-style: none; text-align: center; }
+.main-menu li { margin: 15px 0; }
+.main-menu a { text-decoration: none; font-size: 2em; font-weight: 700; color: #000; transition: color 0.3s ease; }
+.main-menu a:hover { color: #e67e22; }
+
+.bottom-menu { position: absolute; bottom: 20px; display: flex; gap: 20px; font-size: 0.9em; font-weight: 600; }
+
+/* Projects Grid */
+.projects-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px;
+  padding: 40px;
+  justify-items: center;
+}
+
+.project-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px; /* controls size */
+  aspect-ratio: 1 / 1; /* 🔹 makes each card perfectly square */
+  border-radius: 4px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills square without distortion */
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+
+
+/* Footer */
+.footer {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #ddd;
+}
+.footer h2 {
+  font-size: 2.5em;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #000;
+  color: transparent;
+}
+.back-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px 40px 0; /* aligns visually below header */
+}
+
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;              /* fixed width */
+  height: 60px;             /* fixed height */
+  border-radius: 0;         /* sharp square corners */
+  border: 2px solid #000;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
+.back-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+
+</style>
+</html>

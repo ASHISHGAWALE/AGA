@@ -1,0 +1,241 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+header {
+  position: fixed;   /* stays visible while scrolling */
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  z-index: 1000;
+  transition: color 0.3s ease;
+}
+
+.logo {
+  color: #000;
+  font-weight: 900;
+  font-size: 2.5em;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.line {
+  display: block;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Different line lengths */
+.line1 {
+  width: 60%;
+  align-self: flex-start;
+}
+.line2 {
+  width: 100%;
+}
+.line3 {
+  width: 70%;
+  align-self: flex-end;
+}
+
+/* When menu is active, animate into an X */
+.menu-toggle.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+  width: 100%;
+}
+.menu-toggle.active .line2 {
+  opacity: 0;
+}
+.menu-toggle.active .line3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 100%;
+}
+/* About Page Section Navigation */
+.about-nav {
+  margin-top: 20px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.about-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.about-nav a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.about-nav a:hover {
+  color: #e67e22;
+}
+
+.about-nav a.active {
+  text-decoration: line-through;
+}
+
+
+
+
+/* Fullscreen Menu */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 999;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.close-btn, .search-icon {
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #000;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.main-menu li {
+  margin: 15px 0;
+}
+
+.main-menu a {
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.main-menu a:hover {
+  color: #e67e22;
+}
+
+.bottom-menu {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #000;
+}
+
+
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 100px auto 40px auto;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000; /* Outline effect */
+  text-align: center;
+}
+.contact-title {
+  font-size: 4em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+  margin-bottom: 40px;
+  text-align: left; /* ensures left alignment */
+}
+
+/* Background Image */
+.hero-image {
+  height: 80vh;
+  background: url('../SRC/about.png') center/cover no-repeat;
+}
+
+/* About Description Section */
+.about-description {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #000;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.about-description p {
+  margin-bottom: 30px;
+}
+
+.about-description a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.about-description a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
