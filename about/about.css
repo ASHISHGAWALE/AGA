@@ -47,6 +47,9 @@ header {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
+ .about-nav a.active {
+    text-decoration: line-through;
+  }
 
 /* Different line lengths */
 .line1 {
@@ -263,34 +266,52 @@ header {
   html, body {
     width: 100%;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
   }
 
+  /* Header */
   header {
-    padding: 8px 12px;
-    flex-wrap: nowrap; /* keep horizontal */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 1000;
   }
 
   .logo {
-    font-size: 1.6em; /* scale down so it fits */
+    font-size: 1.4em;
   }
 
   .menu-toggle {
-    width: 28px;
-    height: 20px;
+    width: 24px;
+    height: 18px;
+  }
+
+  /* Navigation */
+  .about-nav {
+    margin-top: 30px; /* ensures list appears below fixed header */
+    width: 100%;
+    text-align: center;
   }
 
   .about-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;           /* 🔹 spacing between items */
-  list-style: none;
-  font-size: 1.1em;
-  font-weight: 600;
-}
-
-  .about-nav li {
-    margin: 0;             /* remove extra margins */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.9em;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
+
+  
 
   .about-nav a {
     font-size: 0.95em;     /* scale down text so it fits */
@@ -307,6 +328,7 @@ header {
     padding: 0 12px;
     font-size: 15px;
     line-height: 1.5;
+    text-align: justify; /* improve readability on small screens */
   }
 }
 

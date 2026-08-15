@@ -17,11 +17,11 @@
   </header>
   <section class="about-nav">
   <ul>
-     <li><a href="../about/about.html">About</a></li>
-    <li><a href="../about_sub/team.html">Team</a></li>
-    <li><a href="../about_sub/collab.html">Collaborator</a></li>
-    <li><a href="../about_sub/legal.html">Legal</a></li>
-    <li><a href="../about_sub/policy.html">Policies</a></li>
+     <li><a href="../about/about.html" >About</a></li>
+      <li><a href="../about_sub/team.html" >Team</a></li>
+      <li><a href="../about_sub/collab.html" class="active">Collaborator</a></li>
+      <li><a href="../about_sub/legal.html" >Legal</a></li>
+      <li><a href="../about_sub/policy.html">Policies</a></li>
   </ul>
 </section>
 
@@ -154,9 +154,10 @@
   color: #e67e22;
 }
 
-.about-nav a.active {
+.collaborators h1.active {
   text-decoration: line-through;
 }
+
 
 
   .menu-overlay.active {
@@ -198,7 +199,7 @@
   }
 
   .collaborators h1 {
-    font-size: 2em;
+    font-size: 4em;
     font-weight: 900;
     margin-bottom: 40px;
   }
@@ -237,7 +238,7 @@
   background-color: #fff; /* optional background */
 }
 .contact-title {
-  font-size: 10em;
+   font-size: 10em;
   font-weight: 700;
   letter-spacing: 2px;
   color: transparent;
@@ -292,9 +293,15 @@
     flex-wrap: wrap;
   }
 
+
   .contact-title {
-    font-size: 5em;   /* scale down title */
+    font-size: 2em;   /* scale down title */
     margin-bottom: 30px;
+  }
+    .collaborators h1 {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 40px;
   }
 
   .collab-grid {
@@ -373,7 +380,14 @@
     margin: 30px 0 20px 0;
     text-align: center;
   }
-
+    .collaborators h1 {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+ .about-nav a.active {
+    text-decoration: line-through;
+  }
   /* Collaborators Section */
   .collaborators {
     width: 100%;
