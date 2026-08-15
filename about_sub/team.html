@@ -55,26 +55,26 @@
     <div class="founding-partners-grid">
   <div class="founding-member">
     <div class="image-box">
-      <img src="../SRC/TEAM/AAKASH.jpeg" alt="Aakash Ghagas">
+      <img src="../SRC/TEAM/A.jpg" alt="Aakash Ghagas">
     </div>
     <div class="founding-partner-bio">
       <h3>AAKASH GHAGAS</h3>
       <span class="role-title">FOUNDING PARTNER</span>
       <p>
-        Aakash Ghagas leads design direction and spatial strategy at AGA Architectural Firm. Driven by context, clarity, and structural honesty, his practice explores how architecture shapes human experiences across civic, commercial, and residential landscapes.
+        GOOD ARCHITECTURE TRANSCENDS TRENDS; IT IS AN EXPRESSION OF INDIVIDUALITY, PURPOSE, AND TIMELESS REFINEMENT.
       </p>
     </div>
   </div>
 
   <div class="founding-member">
     <div class="image-box">
-      <img src="../SRC/TEAM/CHINMAY.jpeg" alt="Chinmay Pashte">
+      <img src="../SRC/TEAM/C.jpg" alt="Chinmay Pashte">
     </div>
     <div class="founding-partner-bio">
       <h3>CHINMAY PASHTE</h3>
       <span class="role-title">FOUNDING PARTNER</span>
       <p>
-        Chinmay Pashte directs project realization, urban research, and technical innovation at AGA. His approach integrates sustainable materials with refined construction methodologies to create enduring, culturally resonant spaces.
+        ARCHITECTURE IS THE ART OF TRANSFORMING AN EPHEMERAL THOUGHT INTO SOMETHING ENDURING.
       </p>
     </div>
   </div>
@@ -439,11 +439,6 @@
 }
 
 
-
-
-
-
-
 .founding-partner-bio h3 {
   font-size: 1.4em;
   font-weight: 800;
@@ -469,36 +464,148 @@
 }
 
 
-
   /* Responsive */
-  @media (max-width: 900px) {
-    .team-grid {
-      gap: 30px;
-    }
-    .founding-partners-grid {
-      flex-direction: column;
-      gap: 50px;
-    }
-    .founding-member {
-      flex: 1 1 100%;
-    }
-    .founding-member .image-box {
-      height: 380px;
-    }
+ /* Tablet View (max-width: 900px) */
+/* Tablet View (max-width: 900px) */
+@media (max-width: 900px) {
+  header {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    flex-wrap: nowrap; /* keep logo + toggle in one line */
   }
 
-  @media (max-width: 600px) {
-    .team-member {
-      width: 100%;
-    }
-    .about-nav ul {
-      gap: 15px;
-      font-size: 1em;
-      flex-wrap: wrap;
-    }
-    .contact-title {
-      font-size: 2.5em;
-    }
+  .logo {
+    font-size: 2em;
   }
+
+  .menu-toggle {
+    width: 32px;
+    height: 22px;
+  }
+
+  .about-nav ul {
+    gap: 25px;
+    font-size: 1.1em;
+    flex-wrap: wrap;
+  }
+
+  .team-grid {
+    gap: 20px;
+  }
+
+  .founding-partners-grid {
+    grid-template-columns: 1fr; /* stack vertically */
+    gap: 30px;
+  }
+
+  .contact-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile View (max-width: 600px) */
+/* Perfect Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 12px;
+    width: 100%;          
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 1.4em;
+  }
+
+  .menu-toggle {
+    width: 24px;
+    height: 18px;
+  }
+
+  .about-nav {
+    margin: 20px auto;
+    width: 100%;          
+  }
+
+  .about-nav ul {
+    display: flex;
+    flex-wrap: wrap;      
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.85em;
+    width: 100%;          
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 40px;
+  }
+
+  .contact-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .team-grid {
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px;
+    width: 100%;          
+    box-sizing: border-box;
+  }
+
+  .team-member,
+  .name-only,
+  .image-box {
+    width: 100%;              /* 🔹 full screen width */
+    aspect-ratio: 1 / 1;      /* 🔹 keep square shape */
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* 🔹 fill square neatly */
+  }
+
+  .overlay h3 {
+    font-size: 1em;
+  }
+
+  .overlay p {
+    font-size: 0.8em;
+  }
+
+  .founding-partners-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    width: 100%;
+  }
+
+  .founding-partner-bio h3 {
+    font-size: 1.1em;
+  }
+
+  .founding-partner-bio p {
+    font-size: 0.8em;
+    line-height: 1.4;
+  }
+}
+
+
+
+
+
 </style>
-                     </html>
+</html>

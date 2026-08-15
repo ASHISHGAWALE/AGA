@@ -584,12 +584,29 @@ header > * {
   }
   .slide4::before {
     background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
-                      url('../SRC/mobile/07\ A.jpg');
+                      url('../SRC/mobile/07.jpg');
   }
   .slide5::before {
     background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), 
                       url('../SRC/mobile/08.jpg');
   }
+
+  .hero img,
+.hero1 img,
+.hero2 img,
+.hero3 img,
+.slide img,
+.slide1 img,
+.slide2 img,
+.slide3 img,
+.slide4 img,
+.slide5 img {
+ aspect-ratio: 4 / 3; /* auto scales height */
+  width: 100%;
+  object-fit: cover;
+}
+
+  
 
   .hero-content,
   .slide-content {

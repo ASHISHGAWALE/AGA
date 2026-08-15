@@ -292,103 +292,103 @@ header {
 
 
 /* MOBILE */
+/* Perfect Mobile View (max-width: 600px) */
+@media (max-width: 600px) {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
 
-@media (max-width: 768px) {
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    z-index: 1000;
+  }
 
-    .follow-section {
-        height: 350px;
-    }
+  .logo {
+    font-size: 1.4em;
+  }
 
-    .follow-title {
-        margin-top: 85px;
-        font-size: 72px;
-        -webkit-text-stroke: 1.5px #eeeeee;
-    }
+  .menu-toggle {
+    width: 24px;
+    height: 18px;
+  }
 
-    .social-links {
-        margin-top: 65px;
-        gap: 27px;
-    }
+  /* Contact Section */
+  .contact-section {
+    padding: 80px 20px 40px;
+    text-align: center;
+  }
 
-    .social-links svg {
-        width: 20px;
-        height: 20px;
-    }
+  .contact-title {
+  font-size: 2em;
+  margin-bottom: 30px;
+  -webkit-text-stroke: 1px #000;
+  text-align: center;   /* keeps it centered */
+  display: block;       /* ensures proper centering */
+  width: 100%;          /* spans full width */
 }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-@media (max-width: 480px) {
+  .contact-card {
+    font-size: 0.9em;
+    line-height: 1.4;
+    text-align: center;
+  }
 
-    .follow-section {
-        height: 290px;
-    }
+  /* Footer (Follow Section) */
+  /* Follow Section */
+  .follow-section {
+    height: auto;
+    padding: 40px 20px;
+  }
 
-    .follow-title {
-        margin-top: 70px;
-        font-size: 46px;
-        -webkit-text-stroke: 1.2px #eeeeee;
-    }
+  .follow-title {
+    margin-top: 20px;
+    font-size: 2em;
+    -webkit-text-stroke: 1px #eee;
+  }
 
-    .social-links {
-        margin-top: 50px;
-        gap: 22px;
-    }
+  .social-links {
+    margin-top: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
-    .social-links svg {
-        width: 19px;
-        height: 19px;
-    }
+  .social-links svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Bottom Menu */
+  .bottom-menu {
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.75em;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+  }
+  footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;   /* pushes footer to bottom */
 }
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-    .follow-section {
-        height: 330px;
-    }
-
-    .follow-title {
-        margin-top: 80px;
-
-        font-size: 68px;
-
-        -webkit-text-stroke: 1.5px #e8e8e8;
-    }
-
-    .social-links {
-        margin-top: 60px;
-        gap: 26px;
-    }
-
-    .social-links a {
-        font-size: 20px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .follow-section {
-        height: 280px;
-    }
-
-    .follow-title {
-        margin-top: 70px;
-
-        font-size: 47px;
-
-        letter-spacing: 1px;
-    }
-
-    .social-links {
-        margin-top: 50px;
-        gap: 22px;
-    }
-
-    .social-links a {
-        font-size: 18px;
-    }
 }

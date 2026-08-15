@@ -239,3 +239,108 @@ header {
   text-decoration: none;
   opacity: 0.7;
 }
+
+/* Tablet View */
+@media (max-width: 992px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+   header {
+    padding: 10px 15px;
+    flex-wrap: nowrap; /* keep horizontal */
+  }
+
+  .about-description {
+    max-width: 100%;    /* 🔹 stretch content */
+    padding: 0 15px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header {
+    padding: 8px 12px;
+    flex-wrap: nowrap; /* keep horizontal */
+  }
+
+  .logo {
+    font-size: 1.6em; /* scale down so it fits */
+  }
+
+  .menu-toggle {
+    width: 28px;
+    height: 20px;
+  }
+
+  .about-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;           /* 🔹 spacing between items */
+  list-style: none;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+  .about-nav li {
+    margin: 0;             /* remove extra margins */
+  }
+
+  .about-nav a {
+    font-size: 0.95em;     /* scale down text so it fits */
+  }
+
+  .hero-image {
+    height: 50vh;
+    background-position: center;
+  }
+
+  .about-description {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 12px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+ header {
+    padding: 6px 10px;
+    flex-wrap: nowrap; /* keep horizontal */
+  }
+
+  .logo {
+    font-size: 1.4em;
+  }
+
+  .menu-toggle {
+    width: 24px;
+    height: 18px;
+  }
+  .about-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 11px;           /* 🔹 spacing between items */
+  list-style: none;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding-top: 30px;             /* remove extra margins */
+}
+
+  .hero-image {
+    height: 40vh;
+  }
+
+  .about-description {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}

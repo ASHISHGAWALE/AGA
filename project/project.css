@@ -1,3 +1,4 @@
+@import "tailwindcss";
 body {
   padding-top: 100px; /* adjust based on header height */
 }
@@ -227,4 +228,152 @@ header {
 
 .footer-nav a:hover {
   color: #e67e22;
+}
+
+/* =========================================================
+   MEDIA QUERIES - MAINTAINING 3 COLUMNS ACROSS ALL BREAKPOINTS
+   ========================================================= */
+
+/* Tablet View (Max Width: 992px) */
+@media (max-width: 992px) {
+  body {
+    padding-top: 80px;
+  }
+
+  header {
+    top: 15px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .logo {
+    font-size: 2em;
+  }
+
+  .projects-grid {
+    margin-top: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 15px 25px;
+  }
+
+  .overlay {
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  .main-menu a {
+    font-size: 1.8em;
+  }
+
+  .bottom-menu {
+    gap: 15px;
+    font-size: 0.8em;
+  }
+}
+
+/* Small Tablet & Large Mobile (Max Width: 768px) */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 12px 15px;
+  }
+
+  .overlay {
+    font-size: 0.85em;
+    padding: 6px;
+    line-height: 1.2;
+  }
+
+  .main-menu a {
+    font-size: 1.5em;
+  }
+
+  .main-menu li {
+    margin: 12px 0;
+  }
+
+  .bottom-menu {
+    bottom: 15px;
+    gap: 10px 15px;
+    font-size: 0.75em;
+  }
+
+  .footer-nav ul {
+    gap: 12px 16px;
+  }
+
+  .footer-nav a {
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile View (Max Width: 480px) */
+@media (max-width: 480px) {
+  body {
+    padding-top: 70px;
+  }
+
+  header {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+  }
+
+  .logo {
+    font-size: 1.6em;
+  }
+
+  .menu-toggle {
+    width: 30px;
+    height: 22px;
+  }
+
+  .line {
+    height: 2px;
+  }
+
+  .projects-grid {
+    margin-top: 75px;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns Grid on Mobile */
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .project-card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .overlay {
+    font-size: 0.7em;
+    padding: 4px;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+
+  .main-menu a {
+    font-size: 1.3em;
+  }
+
+  .bottom-menu {
+    position: relative;
+    bottom: auto;
+    margin-top: 30px;
+    gap: 8px 10px;
+    font-size: 0.65em;
+  }
+
+  .footer {
+    padding: 25px 12px 12px;
+  }
+
+  .footer-nav ul {
+    gap: 8px 12px;
+    margin-top: 15px;
+  }
+
+  .footer-nav a {
+    font-size: 0.8em;
+  }
 }
