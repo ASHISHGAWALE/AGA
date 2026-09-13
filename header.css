@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* Base Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* Header */
+header {
+  background: transparent;       /* overlay on hero section */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  color: #000;                   /* always black */
+  font-weight: 900;
+  font-size: 2.5em;
+  transition: color 0.3s ease;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.line {
+  height: 3px;
+  background-color: #000;        /* always black lines */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.line1 { width: 60%; align-self: flex-start; }
+.line2 { width: 100%; }
+.line3 { width: 70%; align-self: flex-end; }
+
+/* Active Menu Animation */
+.menu-toggle.active .line1 {
+  transform: rotate(45deg) translate(5px, 5px);
+  width: 100%;
+}
+.menu-toggle.active .line2 { opacity: 0; }
+.menu-toggle.active .line3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 100%;
+}
+
+/* Fullscreen Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 999;
+}
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Menu Content */
+.main-menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.main-menu li { margin: 15px 0; }
+.main-menu a {
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 700;
+  color: #000;
+  transition: color 0.3s ease;
+}
+.main-menu a:hover { color: #e67e22; }
+
+.bottom-menu {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 20px;
+  font-size: 0.6em;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Tablet View */
+@media (max-width: 992px) {
+  header { top: 15px; }
+  .logo { font-size: 2em; }
+  .main-menu a { font-size: 1.8em; }
+  .bottom-menu { gap: 15px; font-size: 0.6em; }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+  .main-menu a { font-size: 1.5em; }
+  .main-menu li { margin: 12px 0; }
+  .bottom-menu { bottom: 15px; gap: 10px; font-size: 0.6em; }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  header { top: 12px; left: 12px; right: 12px; }
+  .logo { font-size: 1.6em; }
+  .menu-toggle { width: 30px; height: 22px; }
+  .line { height: 2px; }
+  .main-menu a { font-size: 1.3em; }
+  .bottom-menu {
+    position: relative;
+    margin-top: 30px;
+    gap: 8px;
+    font-size: 0.5em;
+  }
+}

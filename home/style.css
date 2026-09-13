@@ -25,6 +25,7 @@ body, html {
   overflow-x: hidden;
 }
 
+
 img {
   max-width: 100%;
   height: auto;
@@ -61,27 +62,24 @@ header > * {
 }
 
 .menu-toggle {
-  width: 38px;
-  height: 26px;
+  width: 40px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  z-index: 1001;
-  color: #000000;
-  transition: color 0.4s ease;
-  padding: 2px 0;
+  z-index: 1000;
 }
 
 .line {
   display: block;
   height: 3px;
-  background-color: currentColor;
+  background-color: black;
   border-radius: 2px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, width 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Default line widths */
+/* Different line lengths */
 .line1 {
   width: 60%;
   align-self: flex-start;
@@ -94,9 +92,9 @@ header > * {
   align-self: flex-end;
 }
 
-/* Active Hamburger Animation (X) */
+/* When menu is active, animate into an X */
 .menu-toggle.active .line1 {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(5px, 5px);
   width: 100%;
 }
 .menu-toggle.active .line2 {
@@ -107,27 +105,24 @@ header > * {
   width: 100%;
 }
 
-/* ==========================================================================
-   Fullscreen Menu Overlay
-   ========================================================================== */
 
+
+/* Fullscreen Menu */
 .menu-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100vh;
-  height: 100dvh;
-  background: #ffffff;
+  height: 100%;
+  background: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: clamp(80px, 12vh, 120px) 24px clamp(30px, 5vh, 50px);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
   z-index: 999;
-  overflow-y: auto;
 }
 
 .menu-overlay.active {
@@ -135,47 +130,52 @@ header > * {
   visibility: visible;
 }
 
+.menu-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.close-btn, .search-icon {
+  font-size: 2.5em;
+  cursor: pointer;
+  color: #000;
+}
+
 .main-menu {
   list-style: none;
   padding: 0;
-  margin: auto 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(12px, 2.5vh, 26px);
 }
 
 .main-menu li {
-  margin: 0;
+  margin: 15px 0;
 }
 
 .main-menu a {
   text-decoration: none;
-  font-size: clamp(1.4rem, 4vw, 2.5rem);
-  font-weight: 800;
-  color: #000000;
-  letter-spacing: 1px;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
+  font-size: 2em;
+  font-weight: 700;
+  color: #000;
+  transition: color 0.3s ease;
 }
 
 .main-menu a:hover {
   color: #e67e22;
-  transform: translateY(-2px);
 }
 
 .bottom-menu {
+  position: absolute;
+  bottom: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: clamp(10px, 2vw, 24px);
-  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-  margin-top: auto;
-  padding-top: 20px;
-  letter-spacing: 0.5px;
+  gap: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #000;
 }
 
 /* ==========================================================================
@@ -536,6 +536,10 @@ header > * {
   .follow-title {
     -webkit-text-stroke: 1.2px #eeeeee;
   }
+  .bottom-menu {
+    gap: 15px;
+    font-size: 0.6em;
+  }
 }
 
 /* ---------- Mobile Devices (max-width: 768px) ---------- */
@@ -661,11 +665,9 @@ header > * {
   }
 
   .bottom-menu {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    width: 100%;
-    font-size: 0.75rem;
+    bottom: 15px;
+    gap: 10px 15px;
+    font-size: 0.6em;
   }
 }
 
@@ -710,9 +712,11 @@ header > * {
   }
 
   .bottom-menu {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    font-size: 0.7rem;
+    position: relative;
+    bottom: auto;
+    margin-top: 30px;
+    gap: 8px 10px;
+    font-size: 0.5em;
   }
 
   .stats-section {

@@ -1,0 +1,78 @@
+/* About Navigation */
+.about-nav {
+  display: flex;
+  justify-content: center;     /* center horizontally */
+  align-items: center;
+  margin-top: 25px;            /* gap below logo */
+  margin-bottom: 40px;         /* space before main content */
+  width: 100%;
+}
+
+.about-nav ul {
+  display: flex;
+  flex-wrap: nowrap;           /* keep links in one line */
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-nav a {
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.about-nav a:hover {
+  color: #e67e22;
+}
+
+/* Active link with line through text */
+.about-nav a.active {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #000;
+}
+
+/* Tablet View */
+@media (max-width: 992px) {
+  .about-nav {
+    margin-top: 80px;          /* same gap below logo */
+    margin-bottom: 35px;
+  }
+  .about-nav ul {
+    gap: 30px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .about-nav {
+    margin-top: 80px;          /* consistent gap below logo */
+    margin-bottom: 30px;
+  }
+  .about-nav ul {
+    gap: 20px;
+    justify-content: center;
+  }
+  .about-nav a {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about-nav {
+    margin-top: 80px;          /* smaller gap below logo */
+    margin-bottom: 25px;
+  }
+  .about-nav ul {
+    gap: 15px;
+  }
+  .about-nav a {
+    font-size: 0.7rem;
+  }
+}

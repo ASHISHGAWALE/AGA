@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGA Architectural Firm</title>
   <link rel="stylesheet" href="t&f.css">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../about_sub/aboutnav.css">
 </head>
 <body>
   <header>
@@ -26,7 +28,7 @@
 </section>
 
   <!-- Fullscreen Menu -->
-  <div class="menu-overlay" id="menu-overlay">
+  <div class="menu-overlay" id="menu-overlay" style="opacity:0; visibility:hidden; pointer-events:none;">
     <ul class="main-menu">
             <li><a href="../home/index.html">Home</a></li>
       <li><a href="../project/project.html">Projects</a></li>
@@ -80,138 +82,7 @@
     text-transform: uppercase;
   }
 
-  header {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    z-index: 1000;
-    transition: color 0.3s ease;
-  }
-
-  .logo {
-    font-weight: 900;
-    font-size: 2.5em;
-    transition: color 0.3s ease;
-  }
-
-  .menu-toggle {
-    width: 40px;
-    height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-  .line {
-    display: block;
-    height: 3px;
-    background-color: black;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .line1 { width: 60%; align-self: flex-start; }
-  .line2 { width: 100%; }
-  .line3 { width: 70%; align-self: flex-end; }
-
-  .menu-toggle.active .line1 {
-    transform: rotate(45deg) translate(5px, 5px);
-    width: 100%;
-  }
-  .menu-toggle.active .line2 { opacity: 0; }
-  .menu-toggle.active .line3 {
-    transform: rotate(-45deg) translate(6px, -6px);
-    width: 100%;
-  }
-  /* About Page Section Navigation */
-.about-nav {
-  margin-top: 20px;
-  margin: 60px auto;
-  text-align: center;
-}
-
-.about-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  font-size: 1.3em;
-  font-weight: 600;
-}
-
-.about-nav a {
-  text-decoration: none;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-.about-nav a:hover {
-  color: #e67e22;
-}
-
-.about-nav a.active {
-  text-decoration: line-through;
-}
- .about-nav a.active {
-    text-decoration: line-through;
-  }
-
-  .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    z-index: 999;
-  }
-
-  .menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .main-menu {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-  }
-
-  .main-menu li { margin: 15px 0; }
-
-  .main-menu a {
-    text-decoration: none;
-    font-size: 2em;
-    font-weight: 700;
-    color: #000;
-    transition: color 0.3s ease;
-  }
-
-  .main-menu a:hover { color: #e67e22; }
-
-  .bottom-menu {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    gap: 20px;
-    font-size: 0.9em;
-    font-weight: 600;
-    color: #000;
-  }
+   
 
   .contact-title {
   font-size: 4em;
@@ -272,46 +143,7 @@
     padding: 0;
   }
 
-  /* Header */
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 15px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #fff;
-    z-index: 1000;
-  }
-
-  .logo {
-    font-size: 1.4em;
-  }
-
-  .menu-toggle {
-    width: 24px;
-    height: 18px;
-  }
-
-  /* Navigation */
-  .about-nav {
-    margin-top: 70px; /* ensures list appears below fixed header */
-    width: 100%;
-    text-align: center;
-  }
-
-  .about-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    font-size: 0.9em;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  
 
   /* Titles */
   .contact-title {
@@ -356,16 +188,6 @@
     word-break: break-word; /* prevent overflow */
   }
 
-  /* Bottom Menu */
-  .bottom-menu {
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.75em;
-    justify-content: center;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-  }
 }
 
 
