@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;     /* center horizontally */
   align-items: center;
-  margin-top: 25px;            /* gap below logo */
+  margin-top: 80px;            /* gap below logo */
   margin-bottom: 40px;         /* space before main content */
   width: 100%;
 }
